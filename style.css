@@ -1,0 +1,231 @@
+:root {
+  /* Primary */
+  --color-purple-600: hsl(246, 80%, 60%);
+  --color-orange-300: hsl(15, 100%, 70%); /* work */
+  --color-blue-300: hsl(195, 74%, 62%); /* play */
+  --color-pink-400: hsl(348, 100%, 68%); /* study */
+  --color-green-400: hsl(145, 58%, 55%); /* exercise */
+  --color-purple-700: hsl(264, 64%, 52%); /* social */
+  --color-yellow-300: hsl(43, 84%, 65%); /* self care */
+
+  /* Neutral */
+  --color-navy-950: hsl(226, 43%, 10%);
+  --color-navy-900: hsl(235, 46%, 20%);
+  --color-purple-500: hsl(235, 45%, 61%);
+  --color-navy-200: hsl(236, 100%, 87%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  width: 100%;
+  min-height: 100dvh;
+  padding-top: 2rem;
+  background-color: var(--color-navy-950);
+  color: var(--color-navy-200);
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.header {
+  background-color: var(--color-navy-900);
+  width: 90%;
+  margin-inline: auto;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.header-profile {
+  background-color: var(--color-purple-600);
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+.header-info h1 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+
+.nav-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+.nav-link {
+  width: 100%;
+  padding-block: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link.selected {
+  color: white;
+}
+
+main {
+  overflow-x: hidden;
+  margin-top: 2rem;
+}
+
+.tracking-list {
+  transition: 0.3s;
+  display: flex;
+  transform: translateX(-100%);
+}
+
+.tracking-section {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.tracking-card {
+  width: 90%;
+  margin: auto;
+  background-color: var(--color-navy-900);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.tracking-card:hover {
+  background-color: hsl(235, 46%, 30%);
+  cursor: pointer;
+}
+
+.tracking-card::before {
+  content: "";
+  width: 100%;
+  height: 40px;
+  display: block;
+}
+
+.tracking-card-work::before {
+  background: var(--color-orange-300) url("images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.tracking-card-play::before {
+  background: var(--color-blue-300) url("images/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.tracking-card-study::before {
+  background: var(--color-pink-400) url("images/icon-study.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.tracking-card-exercise::before {
+  background: var(--color-green-400) url("images/icon-exercise.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.tracking-card-social::before {
+  background: var(--color-purple-700) url("images/icon-social.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.tracking-card-self-care::before {
+  background: var(--color-yellow-300) url("images/icon-self-care.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.card-header,
+.card-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.card-header {
+  padding-bottom: 1rem;
+}
+
+.card-title {
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: white;
+}
+
+.card-menu-btn {
+  background-color: transparent;
+  border: none;
+  color: var(--color-navy-200);
+}
+
+.card-body {
+  padding-top: 0;
+}
+
+.card-time-current {
+  font-size: 2rem;
+  color: white;
+}
+
+footer {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+@media (min-width: 500px) {
+  body {
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header {
+    margin-top: 2rem;
+  }
+
+  footer {
+    grid-column: span 2;
+  }
+}

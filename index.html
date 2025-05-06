@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frontend Mentor | Time tracking dashboard">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-profile">
+        <a href="" class="header-avatar">
+          <img src="images/image-jeremy.png" alt="Image Profile" draggable="false">
+        </a>
+
+        <div class="header-info">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+        </div>
+      </div>
+
+      <nav class="header-nav">
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link" data-number="0">Daily</a></li>
+          <li><a href="#" class="nav-link selected" data-number="1">Weekly</a></li>
+          <li><a href="#" class="nav-link" data-number="2">Monthly</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="tracking-list">
+      <section id="daily" class="tracking-section">
+      </section>
+
+      <section id="weekly" class="tracking-section">
+        <article class="tracking-card tracking-card-work">
+          <header class="card-header">
+            <h3 class="card-title">Work</h3>
+            <button class="card-menu-btn" aria-label="Options">
+              <svg width="21" height="5" viewBox="0 0 21 5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="currentColor" fill-rule="evenodd" />
+              </svg>
+            </button>
+          </header>
+
+          <div class="card-body">
+            <p class="card-time-current">32hrs</p>
+            <p class="card-time-previous">Last Week - 36hrs</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="monthly" class="tracking-section">
+        <article class="tracking-card tracking-card-work">
+          <header class="card-header">
+            <h3 class="card-title">Work</h3>
+            <button class="card-menu-btn" aria-label="Options">
+              <svg width="21" height="5" viewBox="0 0 21 5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="currentColor" fill-rule="evenodd" />
+              </svg>
+            </button>
+          </header>
+
+          <div class="card-body">
+            <p class="card-time-current">103hrs</p>
+            <p class="card-time-previous">Last Week - 128hrs</p>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-credit">
+      <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded
+        by <a href="https://github.com/arisdwii">arisdwii</a>.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
