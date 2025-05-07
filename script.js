@@ -1,5 +1,5 @@
 const links = document.querySelectorAll(".nav-link");
-const trackingList = document.querySelector(".tracking-list");
+const trackingList = document.querySelector(".tracking-wrapper");
 
 let currentIndex = 1;
 
